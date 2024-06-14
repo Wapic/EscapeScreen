@@ -9,14 +9,11 @@ import static net.minecraft.client.option.KeyBinding.UI_CATEGORY;
 
 public class EscapeScreenClient implements ClientModInitializer {
 
-    public static KeyBinding newEscKey = KeyBindingHelper.registerKeyBinding(
-            new KeyBinding(
-                    "key.new_esc.esc",
-                    InputUtil.UNKNOWN_KEY.getCode(),
-                    UI_CATEGORY
-            )
-    );
+	public static KeyBinding newEscKey = KeyBindingHelper.registerKeyBinding(
+			new KeyBinding("key.new_esc.esc", InputUtil.GLFW_KEY_CAPS_LOCK, UI_CATEGORY)
+	);
 
-    @Override
-    public void onInitializeClient() {}
+	@Override
+	public void onInitializeClient() {
+	}
 }

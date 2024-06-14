@@ -33,6 +33,8 @@ public class KeybindsScreenMixin extends GameOptionsScreen {
         super(parent, gameOptions, title);
     }
 
+    @Shadow
+    protected void addOptions() {}
 
     @Inject(method = "keyPressed", at = @At("HEAD"), cancellable = true)
     public void keyPressed(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
@@ -50,5 +52,4 @@ public class KeybindsScreenMixin extends GameOptionsScreen {
             cir.setReturnValue( super.keyPressed(keyCode, scanCode, modifiers));
         }
     }
-
 }

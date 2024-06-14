@@ -28,7 +28,7 @@ public class KeyboardMixin {
             if (this.client.currentScreen == null) {
                 if (newEscKey.wasPressed()) {
                     boolean bl3 = InputUtil.isKeyPressed(MinecraftClient.getInstance().getWindow().getHandle(), 292);
-                    this.client.openPauseMenu(bl3);
+                    this.client.openGameMenu(bl3);
                 }
             }
         }

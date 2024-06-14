@@ -22,8 +22,7 @@ public class ScreenMixin {
     }
 
     @Shadow
-    public void close() {
-    }
+    public void close() {}
 
     @Shadow
     public boolean shouldCloseOnEsc() {
