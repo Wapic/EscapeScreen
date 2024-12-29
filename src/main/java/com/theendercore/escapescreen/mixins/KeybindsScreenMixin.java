@@ -40,9 +40,9 @@ public class KeybindsScreenMixin extends GameOptionsScreen {
     public void keyPressed(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
         if (this.selectedKeyBinding != null) {
             if (newEscKey.matchesKey(keyCode, scanCode)) {
-                this.gameOptions.setKeyCode(this.selectedKeyBinding, InputUtil.UNKNOWN_KEY);
+                this.selectedKeyBinding.setBoundKey(InputUtil.UNKNOWN_KEY);
             } else {
-                this.gameOptions.setKeyCode(this.selectedKeyBinding, InputUtil.fromKeyCode(keyCode, scanCode));
+                this.selectedKeyBinding.setBoundKey(InputUtil.fromKeyCode(keyCode, scanCode));
             }
             this.selectedKeyBinding = null;
             this.lastKeyCodeUpdateTime = Util.getMeasuringTimeMs();
